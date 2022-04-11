@@ -26,3 +26,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+window.monthName = function(monthNumber, locale = 'us-en') {
+    const objDate = new Date();
+    objDate.setDate(1);
+    objDate.setMonth(monthNumber);
+
+    return objDate.toLocaleString(locale, { month: "long" });
+}
