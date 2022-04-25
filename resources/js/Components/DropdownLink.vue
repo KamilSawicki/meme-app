@@ -1,5 +1,5 @@
 <template>
-    <Link :href="href" class="dropdown-link">
+    <Link :href="href" :method="method" class="dropdown-link">
         <slot></slot>
     </Link>
 </template>
@@ -16,6 +16,10 @@ export default {
         href: {
             type: String,
             required: true,
+        },
+        method: {
+            type: String,
+            default: 'GET',
         },
     },
 }

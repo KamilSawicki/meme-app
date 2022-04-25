@@ -70,10 +70,6 @@ export default {
 
         input {
             flex: 1;
-            //padding: .5rem 1rem;
-            //border-radius: .25rem;
-            //border: 1px solid #ccc;
-            //box-shadow: #333333 0 0 0 1px;
             border: none;
             border-bottom: 2px solid #ccc;
             background-color: transparent;
@@ -123,12 +119,17 @@ export default {
     }
     .form-vertical {
         flex-direction: column;
+
+        label{
+            font-size: .8em;
+            color: $main-accent-color;
+        }
         .form-desc {
             width: 100%;
             margin-bottom: .5rem;
         }
         input {
-            width: calc( 100% - 2rem - 2px );
+            width: 100%;
         }
     }
 </style>

@@ -22,6 +22,7 @@ button {
     color: $main-accent-color;
     padding: .5rem 1rem;
     border-radius: .25rem;
+    cursor: pointer;
 }
 .green {
     border: 2px solid #00aa00;
