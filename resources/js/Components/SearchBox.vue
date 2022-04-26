@@ -1,6 +1,6 @@
 <template>
     <div class="search-box-wrapper">
-        <input type="text" placeholder="Szukaj..." name="search" autocomplete="nope">
+        <input type="text" placeholder="Szukaj..." name="search" autocomplete="off">
         <button class="search-button">
             <SearchIcon class="std-icon search-icon"/>
         </button>
