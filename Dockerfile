@@ -4,11 +4,12 @@ WORKDIR /app
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y wget git\
+    && apt-get install -y wget git libzip-dev\
     && pecl install -o -f redis \
     && docker-php-ext-install -j$(nproc) \
         bcmath \
         pdo_mysql \
+        zip \
     && docker-php-ext-enable redis \
     && curl -fsSL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install nodejs -y \
