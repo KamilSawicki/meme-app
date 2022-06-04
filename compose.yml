@@ -34,4 +34,4 @@ services:
       - MYSQL_PASSWORD=app
     restart: always
     ports:
-      - '33060:3306'
+      - '33061:3306'
