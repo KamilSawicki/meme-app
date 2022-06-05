@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignUuid('updated_by_id')->references('id')->on('users');
             $table->foreignUuid('deleted_by_id')->nullable()->references('id')->on('users');
             $table->foreignUuid('meme_id')->references('id')->on('memes');
-            $table->enum('vote', [1, -1, 0]);
+            $table->tinyInteger('vote');
         });
     }
 

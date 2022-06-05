@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
          \App\Models\Meme::factory(100)->create();
          \App\Models\Comment::factory(1)->create(); //One for replies availability
          \App\Models\Comment::factory(999)->create();
+         \App\Models\Vote::factory(10000)->create();
     }
 }
