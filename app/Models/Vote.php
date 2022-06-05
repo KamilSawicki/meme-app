@@ -11,9 +11,9 @@ class Vote extends Model
     use HasFactory;
 
     protected $casts = [
-        'created_at' => 'datatime',
-        'update_at' => 'datatime',
-        'deleted_at' => 'datatime',
+        'created_at' => 'datetime',
+        'update_at' => 'datetime',
+        'deleted_at' => 'datetime',
         'vote' => VoteEnum::class,
     ];
 }
