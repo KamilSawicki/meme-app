@@ -31,20 +31,10 @@ class CommentFactory extends Factory
                 'created_by_id' => $user,
                 'updated_by_id' => $user,
             ];
-
-        $comment = Comment::all()->random()->id;
-
-        if (rand()%2 == 0) {
+        else {
+            $comment = Comment::all()->random()->id;
             return [
                 'comment_id' => $comment,
-                'content' => $content,
-                'created_by_id' => $user,
-                'updated_by_id' => $user,
-            ];
-        }
-        else {
-            return [
-                'meme_id' => $meme,
                 'content' => $content,
                 'created_by_id' => $user,
                 'updated_by_id' => $user,
