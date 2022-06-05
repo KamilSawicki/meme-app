@@ -25,6 +25,7 @@ class MemeFactory extends Factory
         $title = $faker->sentence(3);
         $slug = Str::of($title)->slug();
         $file = Storage::putFile(Meme::STORAGE_PATH, resource_path('assets/images/Example.png'));
+        $is_accepted = $faker->boolean;
 
         return [
             'created_by_id' => $user,
@@ -32,6 +33,7 @@ class MemeFactory extends Factory
             'title' => $title,
             'file' => $file,
             'slug' => $slug,
+            'is_accepted' => $is_accepted
         ];
     }
 }
