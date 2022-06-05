@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('file');
             $table->string('slug')->unique();
+            $table->boolean('is_accepted')->default(false);
         });
     }
 
