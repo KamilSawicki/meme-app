@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Comment extends Model
 {
@@ -45,8 +46,8 @@ class Comment extends Model
     {
         return $this->belongsTo(Meme::class, 'meme_id');
     }
-    public function comment(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function comments(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->belongsTo(Comment::class, 'comment_id');
+        return $this->hasMany(Comment::class);
     }
 }
